@@ -1,0 +1,76 @@
+interview questions:
+
+	Q: Have you used collections framework? Can you introduce it
+	A: Yes, Collections framework provides an architecture to store and 
+	   manipulate a group of objects. It consists of interfaces and classes
+	   that implement those interfaces. 
+	
+	Q: LinkedList vs ArrayList
+	A: Accessing an element in an ArrayList takes constant time, O(1). Adding
+	   an element to the front of the ArrayList takes O(n) which is also its
+	   worst case scenario. Since ArrayLists are backed by Arrays, when a new
+	   array has to be created to copy all the elements and add new ones, it
+	   takes O(n). LinkedList takes O(n) time when adding elements and accessing
+	   them as well. LinkedList uses more memory as it uses nodes. 
+	
+	Q: HashMap vs ConcurrentHashMap vs HashTable
+	A: HashMap stores key-value pairs and it is not synchronized which means it
+	   isn't thread safe. HashTable is essentially a synchronized version of 
+	   HashMap although implementations are most likely different. 
+	   ConcurrentHashMap is a thread safe collection and intended to be used as
+	   primary Map implementation for multi threaded environments.  
+	
+	Q: How to create a new thread
+	A: There are two ways to create a new thread. The first way is to write a
+	   class that extends Thread. Make sure to overwrite the run method and
+	   after initializing the object of the class that extends Thread, run the
+	   start method on the instance. Since java does not support multiple 
+	   inheritances, the second way is to implement Runnable interface. Just 
+	   like before, you need to overwrite the run method. The difference here is
+	   when you want to create a thread, you will pass an instance of the class 
+	   that implements the Runnable interface into Thread as an argument.  
+	
+	Q: Can we start a thread twice
+	A: Once a thread has completed execution, you will have to create a new 
+	   thread and run that. You can't reuse a thread. 
+	
+	Q: What is synchronized keyword
+	A: The synchronized keyword used in blocks of code in Java blocks on a 
+	   shared object and can only have one thread executing in the block at a
+	   time. 
+
+	Q: What is volatile keyword
+	A: The volatile keyword in Java makes sure that all writes to a variable 
+	   being declared as volatile will be written back to main memory 
+	   immediately. 
+	
+	Q: What is lock
+	A: A lock in Java is a thread synchronization mechanism that handles 
+	   synchronizations for threads. 
+	
+	Q: What's your experience about multi-threading
+	A: Just simple problems like producer and consumer or writing several
+	   class threads that handle just one small task like printing a letter. 
+	
+	Q: Abstract classes vs Interfaces
+	A: Abstract classes can have methods defined in them and can only be 
+	   inherited. Interfaces can be implemented by multiple classes and can
+	   only have method signatures.  
+	
+	Q: What if you what to use user-defined classes as Key in Set/Map
+	A: You would put in the class name between the angular brackets. 
+	
+	Q: How to make a class immutable
+	A: Make the class final, make the fields final, don't write setter methods. 
+	
+	
+	Q: What is Garbage collection
+	A: Garbage collection is determines what memory that was previously being 
+	   used and is no longer being used by the application and it will free up 
+	   this memory for other uses.
+	
+	Q: Checked exception vs Unchecked exception
+	A: Checked exceptions are checked at compile time. An example would be 
+	   handling FileNotFoundException when we use FileReader. Unchecked
+	   exceptions are runtime errors. This can include ArithmeticException 
+	   such as attempting division by 0. 
